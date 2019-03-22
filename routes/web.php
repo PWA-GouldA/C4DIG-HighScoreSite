@@ -11,23 +11,29 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/home', function () {
-    return view('welcome');
-});
+/********************************************************/
+Route::get('/', function () { return view('home'); });
+Route::get('/home', function () { return view('welcome'); });
+Route::get('/about', function () { return view('about'); });
+Route::get('/contact', function () { return view('contact'); });
 
 
+/********************************************************/
 Route::get('/games', 'GameController@index');
 
+/********************************************************/
+Route::get('/developers', 'DeveloperController@index');
+
+/********************************************************/
+
+/********************************************************/
 
 
-
-
+/********************************************************/
 Route::get('/layout/',function(){return view('layouts.layout');});
 
+
+/********************************************************/
 Route::get('/l/404',function(){return view('samples.404');});
 Route::get('/l/blank',function(){return view('samples.blank');});
 Route::get('/l/buttons',function(){return view('samples.buttons');});

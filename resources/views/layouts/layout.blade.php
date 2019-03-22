@@ -49,6 +49,36 @@
         <!-- Divider -->
         <hr class="sidebar-divider">
 
+        <li class="nav-item">
+            <a class="nav-link" href="/developers">
+                <i class="fas fa-fw fa-gamepad"></i>
+                <span>Developers</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/games">
+                <i class="fas fa-fw fa-couch"></i>
+                <span>Games</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <li class="nav-item">
+            <a class="nav-link" href="/about">
+                <i class="fas fa-fw fa-info"></i>
+                <span>About</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">
+                <i class="fas fa-fw fa-phone"></i>
+                <span>Contact</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>

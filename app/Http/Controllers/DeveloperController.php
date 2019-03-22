@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Developer;
 use Illuminate\Http\Request;
 
 class DeveloperController extends Controller
@@ -14,6 +15,9 @@ class DeveloperController extends Controller
     public function index()
     {
         //
+        $developers = Developer::all();
+        return view('developers.index', compact('developers'));
+
     }
 
     /**
