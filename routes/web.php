@@ -12,20 +12,33 @@
 */
 
 Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/home', function () {
     return view('welcome');
 });
 
-Route::get('/l/404',function(){return view('layouts.404');});
-Route::get('/l/blank',function(){return view('layouts.blank');});
-Route::get('/l/buttons',function(){return view('layouts.buttons');});
-Route::get('/l/cards',function(){return view('layouts.cards');});
-Route::get('/l/charts',function(){return view('layouts.charts');});
-Route::get('/l/forgot-password',function(){return view('layouts.forgot-password');});
-Route::get('/l/index',function(){return view('layouts.index');});
-Route::get('/l/login',function(){return view('layouts.login');});
-Route::get('/l/register',function(){return view('layouts.register');});
-Route::get('/l/tables',function(){return view('layouts.tables');});
-Route::get('/l/utilities-animation',function(){return view('layouts.utilities-animation');});
-Route::get('/l/utilities-border',function(){return view('layouts.utilities-border');});
-Route::get('/l/utilities-color',function(){return view('layouts.utilities-color');});
-Route::get('/l/utilities-other',function(){return view('layouts.utilities-other');});
+
+Route::get('/games', 'GameController@index');
+
+
+
+
+
+Route::get('/layout/',function(){return view('layouts.layout');});
+
+Route::get('/l/404',function(){return view('samples.404');});
+Route::get('/l/blank',function(){return view('samples.blank');});
+Route::get('/l/buttons',function(){return view('samples.buttons');});
+Route::get('/l/cards',function(){return view('samples.cards');});
+Route::get('/l/charts',function(){return view('samples.charts');});
+Route::get('/l/forgot-password',function(){return view('samples.forgot-password');});
+Route::get('/l/index',function(){return view('samples.index');});
+Route::get('/l/login',function(){return view('samples.login');});
+Route::get('/l/register',function(){return view('samples.register');});
+Route::get('/l/tables',function(){return view('samples.tables');});
+Route::get('/l/utilities-animation',function(){return view('samples.utilities-animation');});
+Route::get('/l/utilities-border',function(){return view('samples.utilities-border');});
+Route::get('/l/utilities-color',function(){return view('samples.utilities-color');});
+Route::get('/l/utilities-other',function(){return view('samples.utilities-other');});
