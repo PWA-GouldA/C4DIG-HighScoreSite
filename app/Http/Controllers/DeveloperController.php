@@ -28,6 +28,7 @@ class DeveloperController extends Controller
     public function create()
     {
         //
+        return view('developers.create');
     }
 
     /**

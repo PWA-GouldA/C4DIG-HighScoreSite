@@ -13,16 +13,42 @@
 
 /********************************************************/
 Route::get('/', function () { return view('home'); });
-Route::get('/home', function () { return view('welcome'); });
-Route::get('/about', function () { return view('about'); });
-Route::get('/contact', function () { return view('contact'); });
+Route::get('/home', 'Pages@welcome');
+Route::get('/about', 'Pages@about');
+Route::get('/contact', 'Pages@contact');
 
 
 /********************************************************/
-Route::get('/games', 'GameController@index');
+// games = the game resource
+Route::resource('games', 'GameController');
+
+Route::get('/games/{game}/delete', 'GameController@delete');
+
+/*
+ * The above is the equivalent to the following actions:
+ * GET      /games              (index)
+ * GET      /games/create       (create)
+ * POST     /games              (store)
+ * GET      /games/gameID       (show)
+ * GET      /games/gameID/edit  (edit)
+ * PUT      /games/gameID       (update)      [complete replacement, use patch instead]
+ * PATCH    /games/gameID       (update)
+ * DELETE   /games/gameID       (destroy)
+ *
+ * These actions are equivalent to the following Laravel code:
+ * Route::get('/games', 'GameController@index');
+ * Route::get('/games/{game}', 'GameController@show');
+ * Route::get('/games/create', 'GameController@create');
+ * Route::post('/games', 'GameController@store');
+ * Route::get('/games/{game}/edit', 'GameController@edit');
+ * Route::patch('/games/{game}', 'GameController@update');
+ * Route::delete('/games/{game}', 'GameController@destroy');
+ */
+
 
 /********************************************************/
 Route::get('/developers', 'DeveloperController@index');
+Route::get('/developers/create', 'DeveloperController@create');
 
 /********************************************************/
 
