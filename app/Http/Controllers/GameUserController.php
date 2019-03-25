@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\GameUser;
 use Illuminate\Http\Request;
+use App\User;
+use App\Game;
 
-class HighScoreController extends Controller
+class GameUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +17,8 @@ class HighScoreController extends Controller
     public function index()
     {
         //
+        $scores = GameUser::All();
+        return view('scores.index', compact(['scores']));
     }
 
     /**
@@ -40,10 +45,10 @@ class HighScoreController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Game  $game
+     * @param  \App\GameUser  $gameUser
      * @return \Illuminate\Http\Response
      */
-    public function show(Game $game)
+    public function show(GameUser $gameUser)
     {
         //
     }
@@ -51,10 +56,10 @@ class HighScoreController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Game  $game
+     * @param  \App\GameUser  $gameUser
      * @return \Illuminate\Http\Response
      */
-    public function edit(Game $game)
+    public function edit(GameUser $gameUser)
     {
         //
     }
@@ -63,10 +68,10 @@ class HighScoreController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Game  $game
+     * @param  \App\GameUser  $gameUser
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Game $game)
+    public function update(Request $request, GameUser $gameUser)
     {
         //
     }
@@ -74,10 +79,10 @@ class HighScoreController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Game  $game
+     * @param  \App\GameUser  $gameUser
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Game $game)
+    public function destroy(GameUser $gameUser)
     {
         //
     }

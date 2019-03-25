@@ -24,7 +24,6 @@ class UserSeeder extends Seeder
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
 
-
         DB::table('users')->insert([
             'name' => 'eileen',
             'email' => 'eileen@example.com',
@@ -46,6 +45,24 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'robyn',
             'email' => 'robyn@example.com',
+            'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'password' => 'secret',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'isaac',
+            'email' => 'isaac@example.com',
+            'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'password' => 'secret',
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'bob',
+            'email' => 'bob@example.com',
             'email_verified_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'password' => 'secret',
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

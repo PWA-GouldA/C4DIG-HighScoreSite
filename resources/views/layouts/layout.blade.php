@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
             <div class="sidebar-brand-icon rotate-15">
                 <i class="fas fa-dragon text-black-50"></i>
             </div>
@@ -59,6 +59,12 @@
             <a class="nav-link" href="/games">
                 <i class="fas fa-fw fa-couch"></i>
                 <span>Games</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="/scores">
+                <i class="fas fa-fw fa-clone"></i>
+                <span>Scores</span></a>
         </li>
 
         <!-- Divider -->

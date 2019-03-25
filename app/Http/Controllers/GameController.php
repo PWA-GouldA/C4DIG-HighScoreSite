@@ -6,6 +6,7 @@ use App\Game;
 use Illuminate\Http\Request;
 
 use App\Developer;
+use Carbon\Carbon;
 
 class GameController extends Controller
 {
@@ -30,7 +31,6 @@ class GameController extends Controller
         //
         $developers = Developer::all();
         return view('games.create', compact('developers'));
-
     }
 
     /**
@@ -55,11 +55,17 @@ class GameController extends Controller
      *
      * @param  \App\Game $game
      * @return \Illuminate\Http\Response
+     *
+     * Game $game is using route-model binding - Laravel interprets the requirements automagically
+     *
      */
     public function show(Game $game)
     {
         //
-        return view('games.show', compact('game'));
+        $diffCreate = Carbon::parse($game->created_at)->diffForHumans(['parts' => 3,]);
+        $diffUpdate = Carbon::parse($game->updated_at)->diffForHumans(['parts' => 3,]);
+        $players = $game->users;
+        return view('games.show', compact(['game', 'players', 'diffCreate', 'diffUpdate',]));
     }
 
     /**
@@ -79,7 +85,7 @@ class GameController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \App\Game $game
+     * @param  \App\Game                $game
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Game $game)
@@ -87,9 +93,10 @@ class GameController extends Controller
         //
         $game->name = $request->name;
         $game->developer_id = $request->developer;
+        $game->updated_at = Carbon::now()->format('Y-m-d H:i:s');
         $game->update();
 
-        return redirect('/games');
+        return redirect('/games/' . $game->id);
     }
 
 

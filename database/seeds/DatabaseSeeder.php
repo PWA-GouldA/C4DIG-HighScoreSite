@@ -13,9 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call(UserSeeder::class);
-        $this->call(HighScoreSeeder::class);
         $this->call(DeveloperSeeder::class);
         $this->call(GameSeeder::class);
-
+        $this->call(GameUserSeeder::class);
     }
 }

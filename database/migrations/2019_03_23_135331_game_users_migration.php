@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHighScoresTable extends Migration
+class GameUsersMigration extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateHighScoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('high_scores', function (Blueprint $table) {
+        //
+        Schema::create('game_user', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('game_id')->default(0);
             $table->bigInteger('user_id')->default(0);
-            $table->bigInteger('score')->nullable();
+            $table->bigInteger('score')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateHighScoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('high_scores');
+        Schema::dropIfExists('game_user');
     }
 }

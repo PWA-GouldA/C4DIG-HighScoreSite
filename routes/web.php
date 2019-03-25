@@ -47,10 +47,14 @@ Route::get('/games/{game}/delete', 'GameController@delete');
 
 
 /********************************************************/
-Route::get('/developers', 'DeveloperController@index');
-Route::get('/developers/create', 'DeveloperController@create');
+Route::resource('developers', 'DeveloperController');
+
+Route::get('/developers/{developer}/delete', 'DeveloperController@delete');
 
 /********************************************************/
+Route::resource('scores', 'GameUserController');
+
+Route::get('/scores/{score}/delete', 'GameUserController@delete');
 
 /********************************************************/
 

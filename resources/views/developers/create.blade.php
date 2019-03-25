@@ -7,7 +7,9 @@
 @section('content')
     <div class="row">
         <div class="col">
-            <form action="create" method="post">
+            <form action="/developers" method="post">
+                {{ csrf_field() }}
+
                 <div class="form-group">
                     <label for="name">Developer Name</label>
                     <input type="text" name="name" class="form-control">
