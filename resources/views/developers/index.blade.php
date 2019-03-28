@@ -47,7 +47,7 @@
                                 <button type="submit" class="btn btn-danger btn-sm"
                                         formaction="/developers/{{$developer->id}}/delete"
                                         aria-label="delete">
-                                    <i class="fas fa-times">  </i>
+                                    <i class="fas fa-times"></i>
                                 </button>
                                     </div>
                             </form>

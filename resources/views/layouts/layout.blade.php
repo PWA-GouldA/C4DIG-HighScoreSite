@@ -67,6 +67,12 @@
                 <span>Scores</span></a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="/users">
+                <i class="fas fa-fw fa-user-ninja"></i>
+                <span>Users</span></a>
+        </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 
