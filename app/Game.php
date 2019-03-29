@@ -9,14 +9,13 @@ class Game extends Model
 {
     public function users()
     {
-        return $this->belongsToMany(User::class)->withPivot(['user_id','game_id','score']);
+        return $this->belongsToMany(User::class)->withPivot(['user_id', 'game_id', 'score']);
     }
 
-public function user()
+    public function user()
     {
-        return $this->belongsTo(User::class)->withPivot(['user_id','game_id','score']);
+        return $this->belongsTo(User::class)->withPivot(['user_id', 'game_id', 'score']);
     }
-
 
     public function developer()
     {

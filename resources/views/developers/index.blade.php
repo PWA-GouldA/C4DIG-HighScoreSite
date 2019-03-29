@@ -40,7 +40,7 @@
                                 </button>
 
                                 <button type="submit" class="btn btn-warning btn-sm"
-                                        formaction="/developers/{{$developer->id}}/edit"
+                                        formaction="/developers/{{ $developer->id }}/edit"
                                         aria-label="edit">
                                     <i class="fas fa-edit"></i>&nbsp;
                                 </button>
