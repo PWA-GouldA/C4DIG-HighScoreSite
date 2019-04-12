@@ -80,3 +80,7 @@ Route::get('/l/utilities-animation',function(){return view('samples.utilities-an
 Route::get('/l/utilities-border',function(){return view('samples.utilities-border');});
 Route::get('/l/utilities-color',function(){return view('samples.utilities-color');});
 Route::get('/l/utilities-other',function(){return view('samples.utilities-other');});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
